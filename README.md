@@ -17,6 +17,13 @@ This Python project fetches closing stock prices for the last 10 days for five t
 pip install -r requirement.txt
 ```
 
+### Download the required dataset
+
+```
+https://www.kaggle.com/datasets/shivamb/netflix-shows?resource=download
+```
+1 - ddddddddddddddddddddddddddddddddddddddddddddddd
+
 ### Executing program
 
 ```
