@@ -4,7 +4,7 @@
 
 
 # TODO finish the README.md file
-# TODO finish requirments.txt file
+# TODO finish requirements.txt file
 
 
 import pandas as pd
@@ -34,8 +34,26 @@ plt.title("Indian Movies Added to Netflix Per Year")
 plt.xlabel('Years')
 plt.ylabel('Number of Movies')
 plt.grid(True)
-plt.savefig(f'charts/Indian Movies.png')
+# plt.savefig(f'charts/Indian Movies.png') TODO add it back
 plt.show()
 
 
 ########_____Second Graph_____######
+second_filter = netflix_movies['type'].value_counts()
+second_filter.plot.bar(color=['blue', 'red'])
+plt.title("Number of Shows & Movies on Netflix")
+plt.ylabel('Number of Movies')
+plt.show()
+
+
+########_____Third Graph_____######
+third_filter = netflix_movies.loc[(netflix_movies['type'] == 'Movie'), ['listed_in']]
+third_filter = third_filter['listed_in'].str.split(', ').explode()
+third_filter = third_filter.value_counts()
+third_filter.head().plot.pie(autopct='%1.1f%%', explode=(0.1, 0.03, 0.03, 0.03, 0.03))
+plt.title("Top Five Movie Categories in Netflix")
+plt.ylabel('')
+plt.show()
+
+
+########_____Fourth Graph - How Many Content is Added Per Year in Netflix?_____######
