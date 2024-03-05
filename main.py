@@ -18,7 +18,8 @@ except FileExistsError:
 netflix_movies = pd.read_csv("netflix_titles.csv", index_col=0)
 
 
-########_____First Graph - How many Indian movies are added to Netflix per year?_____######
+########_First Graph - How many Indian movies are added to Netflix per year?_######
+
 first_filter = netflix_movies.loc[(netflix_movies['country'] == 'India'), ['date_added']]
 first_filter['date_added'] = first_filter['date_added'].apply(parse)
 first_filter['date_added'] = first_filter['date_added'].dt.year
@@ -33,7 +34,8 @@ plt.grid(True)
 plt.show()
 
 
-########_____Second Graph - What is the total number of movies and shows currently available on Netflix?_____######
+########_Second Graph - What is the total number of movies and shows currently available on Netflix?_######
+
 second_filter = netflix_movies['type'].value_counts()
 
 second_filter.plot.bar(color=['blue', 'red'])
@@ -42,7 +44,8 @@ plt.ylabel('Number of Movies')
 plt.show()
 
 
-########_____Third Graph - What are the top five movie categories on Netflix?_____######
+########_Third Graph - What are the top five movie categories on Netflix?_######
+
 third_filter = netflix_movies.loc[(netflix_movies['type'] == 'Movie'), ['listed_in']]
 third_filter = third_filter['listed_in'].str.split(', ').explode()
 third_filter = third_filter.value_counts()
