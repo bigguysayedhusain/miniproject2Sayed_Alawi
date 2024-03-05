@@ -7,7 +7,11 @@
 
 ## Description
 
-This Python project fetches closing stock prices for the last 10 days for five tickers using the yfinance API, converts this data using NumPy, and graph trends using Matplotlib. It then automatically creates a directory to save these graphs as PNG files using the Path function from the pathlib module and matplotlib. This approach enables easy analysis and presentation of financial data.
+This project utilizes Python, pandas, and Matplotlib to analyze the distribution of TV Shows and movies available on 
+Netflix. The data is sourced from netflix_titles.csv, which contains detailed information on Netflix titles, including 
+directors, cast, duration, genre, and more.The results of the analysis are shown to the users as graphs. Then, it 
+automatically creates  a directory to save these graphs as PNG files using the Path function from the pathlib module and
+matplotlib. 
 
 ## Getting Started
 
@@ -22,7 +26,10 @@ pip install -r requirement.txt
 ```
 https://www.kaggle.com/datasets/shivamb/netflix-shows?resource=download
 ```
-1 - ddddddddddddddddddddddddddddddddddddddddddddddd
+1. Download the archive.zip file from the above link into your computer.
+2. unzip the file
+3. Copy the netflix_titles.csv file and paste at the top of the project (miniproject2Sayed_Alawi)
+4. On the copy window, don't change the name and just click Ok.
 
 ### Executing program
 
