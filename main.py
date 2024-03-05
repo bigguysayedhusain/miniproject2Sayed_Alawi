@@ -2,8 +2,6 @@
 # Sayed Husain Alawi
 # Mini Project 2
 
-
-# TODO finish the README.md file
 # TODO finish requirements.txt file
 
 
