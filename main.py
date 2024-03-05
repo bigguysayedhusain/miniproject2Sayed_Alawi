@@ -2,9 +2,6 @@
 # Sayed Husain Alawi
 # Mini Project 2
 
-# TODO finish requirements.txt file
-
-
 import pandas as pd
 import matplotlib.pyplot as plt
 from pathlib import Path
